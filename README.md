@@ -1,5 +1,5 @@
 # photogallery
-Angular app to demonstrate which API's, angular services and search photos on Flickr API
+Angular app to demonstrate accessing API's using angular services and search photos on Flickr
 
 This Application uses flickrapi to access flickr.photos.search API
 
