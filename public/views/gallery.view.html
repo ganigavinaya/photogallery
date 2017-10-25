@@ -1,0 +1,25 @@
+<div ng-controller="GalleryController">
+	
+	<h1>Most Popular Photos of Red Panda</h1>
+    <div class="bar">
+        <!-- These two buttons switch the layout variable,
+             which causes the correct UL to be shown. -->
+        <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
+        <a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
+    </div>
+
+    <ul ng-show="layout == 'grid'" class="grid">
+
+        <!-- A view with big photos and no text -->
+        <li ng-repeat="p in photos">   
+			
+            <a href={{formURL(p)}}><img ng-src={{formURL(p)}}></a>
+        </li>
+    </ul>
+    <ul ng-show="layout == 'list'" class="list">
+        <!-- A compact view smaller photos and titles -->
+        <li ng-repeat="p in photos">
+            <a href={{formURL(p)}}><img ng-src={{formURL(p,true)}}></a>
+        </li>
+    </ul>
+</div>
